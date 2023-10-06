@@ -19,9 +19,13 @@ if($length <2){
 }
 return $responses;
 }
-function addsalt($nameToSalt){
-    $salt='unPeuDeSel123!';
+function addSalt($nameToSalt){
+    $salt=' You succeed ! ';
     $saltedName=$salt.$nameToSalt.$salt;
     return $saltedName;
 }
+ function encodeName($saltedName){
+    $encodeName= sha1($saltedName);
+    return $encodeName;
+ }
 ?>
